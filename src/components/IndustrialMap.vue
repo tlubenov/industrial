@@ -110,7 +110,10 @@
         if (this.zoom < 18) {
           return (feature, layer) => {
             layer.bindTooltip(
-              `<div class="small-label">${feature.properties.puid}</div>`,
+              `<div class="small-label">ПИ ${feature.properties.puid}</div>
+               <div class="small-label">ПЛЩ ${feature.properties.area} кв.м.</div>
+               <div class="small-label">БЕЛ. ${feature.properties.description}</div>
+                `,
               { permanent: false, sticky: false, direction: 'auto' },
             );
           };
